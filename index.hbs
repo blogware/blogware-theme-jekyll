@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {{#each @posts}}
+      <li>
+        <span class="post-meta">{{datetime date}}</span>
+
+        <h2>
+          <a class="post-link" href="{{fullpath path}}">{{title}}</a>
+        </h2>
+    {{/each}}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{fullpath '/feed.xml'}}">via RSS</a></p>
+
+</div>
