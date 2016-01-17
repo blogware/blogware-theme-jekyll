@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{#if @current.title}}{{@current.title}}{{else}}{{@site.title}}{{/if}}</title>
-  <meta name="description" content="{{#if @current.excerpt}}{{@current.excerpt}}{{else}}{{@site.description}}{{/if}}">
+  <meta name="description" content="{{#if @current.content}}{{excerpt @current.content}}{{else}}{{@site.description}}{{/if}}">
 
   <link rel="stylesheet" href="{{fullpath '/css/main.css'}}">
   <link rel="canonical" href="{{permalink @current.path}}">
