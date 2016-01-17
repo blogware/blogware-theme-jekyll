@@ -8,7 +8,7 @@
     <pubDate>{{datetime @site.time "rfc822"}}</pubDate>
     <lastBuildDate>{{datetime @site.time "rfc822"}}</lastBuildDate>
     <generator>Blogware v{{@blogware.version}}</generator>
-    {{#each @posts}}
+    {{#loop @posts limit=10}}
       <item>
         <title>{{title}}</title>
         <description>{{content}}</description>
@@ -19,6 +19,6 @@
           <category>{{tag}}</category>
         {{/each}}
       </item>
-    {{/each}}
+    {{/loop}}
   </channel>
 </rss>
