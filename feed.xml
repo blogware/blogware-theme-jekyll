@@ -16,7 +16,7 @@
         <link>{{permalink path}}</link>
         <guid isPermaLink="true">{{permalink path}}</guid>
         {{#each tags}}
-          <category>{{tag}}</category>
+          <category>{{.}}</category>
         {{/each}}
       </item>
     {{/loop}}
